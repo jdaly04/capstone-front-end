@@ -1,0 +1,69 @@
+/*////////////  HEADER STYLES  start  ////////////// */
+
+.hero {
+    background-color: red;
+    /*background-image:url(../assets/styles/images/header.jpg);*/
+    background-image: url(./images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 702px;
+}
+/*////////////  HEADER STYLES end   ////////////// */
+
+
+/*////////////  ABOUT STYLES  start  ////////////// */
+.about {
+    background-color: grey;
+    width: 100%;
+    height: 450px;
+}
+
+.about-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 54px;
+    color: black;
+    text-align: center;
+    border: 1px cyan solid;
+    /* margin: 6px 2px; */
+}
+
+.about-bio {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    border: 1px red solid;
+    width: 540px;
+    margin: 0 auto;
+}
+/*////////////  ABOUT STYLES  end  ////////////// */
+
+
+/*////////////  PHOTO GALLERY STYLES  start  ////////////// */
+.photo-gallery {
+    width: 100%;
+    height: 600px;
+    background-color: orange;
+    /* text-align: center; */
+}
+
+.photo-thumb {
+    border: 1px solid cyan;
+    width: 33%;
+    float: left;
+    height: 300px;
+    transition: color .5s ease-out, background .5s ease-in;
+}
+
+.photo-thumb:hover {
+  background-color: blue;
+
+}
+
+.footer {
+    background-color: black;
+    width: 100%;
+    height: 400px;
+}
