@@ -2,11 +2,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 
+.navbar-inverse .navbar-brand {
+    color: cadetblue;
+}
+
 .nav-bar,
 .dropdown-toggle {
-  background-color: dgf;
-  font-family: Trebuchet MS;
+  background-color: #f0f8ff;
+  font-family: 'Nunito', sans-serif;
 
 }
 
-@import './styles1.css'
+@import './styles1.css';
