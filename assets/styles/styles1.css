@@ -38,6 +38,14 @@
     width: 540px;
     margin: 0 auto;
 }
+
+#view-all {
+  background-color: aliceblue;
+  border-radius: 100px;
+  font-family: Oswald;
+  padding: 15px;
+
+}
 /*////////////  ABOUT STYLES  end  ////////////// */
 
 
