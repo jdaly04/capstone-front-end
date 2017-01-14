@@ -9,7 +9,7 @@
 
 const viewAllSuccess = (data) => {
   // $('.list-of-fundraisers').html(getAllFundraisers(data));
-  // $('.messages').empty();
+  $('#product-crud').modal('show');
   console.log("data is", data);
 
   // Need to add button for user to add fundraiser to library by fundraiser id and library id so it goes in correct library.
