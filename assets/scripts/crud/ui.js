@@ -2,17 +2,15 @@
 
 //const store = require('../store');
 //const readData = JSON.parse(data);
-//const getAllFundraisers = require('../templates/fundraisers.handlebars');
+const viewAllProductsTemplate = require('../templates/products.handlebars');
 // const createLibrary = require('../templates/libraries.handlebars');
 //const getAllLibraries = require('../templates/allLibraries.handlebars');
 //const store = require('../store.js');
 
 const viewAllSuccess = (data) => {
-  // $('.list-of-fundraisers').html(getAllFundraisers(data));
   $('#product-crud').modal('show');
   console.log("data is", data);
-
-  // Need to add button for user to add fundraiser to library by fundraiser id and library id so it goes in correct library.
+  $('#view-all-products').show().html(viewAllProductsTemplate(data));
 };
 
 // const getLibrariesSuccess = (data) => {
