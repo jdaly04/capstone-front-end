@@ -1,0 +1,13 @@
+<div id="template-title">PAST PROJECTS</div>
+<hr>
+{{#each products as |product|}}
+<ul class=handlebars-body>
+<h4 id="product-description">Product Description: {{product.description}}</h4>
+<h5>Price: ${{product.price}}</h5>
+<h5>Photo Link: {{product.after_photo_url}}
+<hr>
+  <button id="edit-product" class="btn btn-default test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true" href="#myModal5">Edit Product</button>
+  <button id="delete-product" class="btn btn-danger test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true" href="#myModal5">Delete Product</button>
+</ul>
+<hr>
+{{/each}}
