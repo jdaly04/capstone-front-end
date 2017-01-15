@@ -17,7 +17,6 @@ const signUpSuccess = (data) => {
 
 const signInSuccess = (data) => { //if you have curly braces you can have more than one expression. without, only 1 expression allowed.
   store.user = data.user;
-  success(data);
   $('#ch-password').show();
   $('#sign-out-button').show();
   $('#sign-in-button').hide();

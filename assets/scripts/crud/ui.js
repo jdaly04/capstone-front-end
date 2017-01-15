@@ -23,11 +23,11 @@ const viewAllSuccess = (data) => {
 //   console.log(data);
 // };
 //
-// const createLibSuccess = (data) => {
-//   console.log(data);
-//   $('.messages').text('Success! New library created and added to the end of your library list!');
-//   $('#create-form').trigger("reset");
-// };
+ const createProductSuccess = (data) => {
+  console.log(data);
+  $('.messages').text('Success! New library created and added to the end of your library list!');
+    $('#create-form').trigger('reset');
+};
 //
 // const createFailure = (error) => {
 //   console.error(error);
@@ -59,7 +59,7 @@ const viewAllSuccess = (data) => {
 module.exports = {
   viewAllSuccess,
   // getLibrariesSuccess,
-  // createLibSuccess,
+   createProductSuccess,
   // updateLibSuccess,
   // deleteLibSuccess,
   failure,

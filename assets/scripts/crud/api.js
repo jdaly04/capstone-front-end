@@ -22,15 +22,15 @@ $.ajax({
   //     data,
   //   });
   //
-  // const createLib = (data) =>
-  //  $.ajax({
-  //    url: config.apiOrigins.production + '/libraries',
-  //    method: 'POST',
-  //    headers: {
-  //      Authorization: 'Token token=' + store.user.token,
-  //    },
-  //    data,
-  //  });
+    const createProduct = (data) =>
+   $.ajax({
+     url: config.apiOrigins.production + '/products',
+     method: 'POST',
+     headers: {
+       Authorization: 'Token token=' + store.user.token,
+     },
+     data,
+   });
   //
   //  const updateLib = (data) =>
   // // console.log(data);
@@ -59,7 +59,7 @@ $.ajax({
 
 module.exports = {
   viewAllProducts,
-  // createLib,
+  createProduct,
   // updateLib,
   // deleteLib,
   // getLibraries,
