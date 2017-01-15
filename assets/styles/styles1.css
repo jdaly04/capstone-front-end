@@ -36,20 +36,33 @@
 }
 
 /*////////////  ABOUT STYLES  end  ////////////// */
+#create-product {
+  text-align: center;
+}
 
-#view-all,
-#create-product,
-#edit-product {
-  background-color: #B0C4DE;
+#new-prod {
+  background-color: #52658F;
   border-radius: 100px;
+  color: #F7F5E6;
   font-family: Oswald;
   padding: 10px;
+}
+
+#view-all,
+#edit-product {
+  background-color: #52658F;
+  border-radius: 100px;
+  color: #F7F5E6;
+  font-family: Oswald;
   margin: 20px;
+  padding: 15px;
 }
 
 #delete-product {
   border-radius: 100px;
+  color: #F7F5E6;
   font-family: Oswald;
+  margin: 20px;
   padding: 15px;
 
 }
@@ -105,7 +118,7 @@
 }
 
 .photo-thumb {
-    border: 1px solid cyan;
+    border: 1px solid #E8E8E8;
     width: 33%;
     float: left;
     height: 300px;
