@@ -18,14 +18,14 @@
 .about-title {
     font-family: 'Oswald', sans-serif;
     font-size: 54px;
-    color: #52658F;
+    color: #333a56;
     text-align: center;
     height:
     /* margin: 6px 2px; */
 }
 
 .about-bio {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', serif;
     text-align: center;
     font-size: 18px;
     font-weight: 400;
@@ -48,9 +48,17 @@
   padding: 10px;
 }
 
-#view-all,
 #edit-product {
   background-color: #52658F;
+  border-radius: 100px;
+  color: #F7F5E6;
+  font-family: Oswald;
+  margin: 20px;
+  padding: 15px;
+}
+
+#view-all {
+  background-color: #FF533D;
   border-radius: 100px;
   color: #F7F5E6;
   font-family: Oswald;
