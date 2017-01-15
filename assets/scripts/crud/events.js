@@ -5,17 +5,6 @@ const api = require('./api');
 const ui = require('./ui');
 //const store = require('../store.js');
 
-
-// const onGetLibraries = function() {
-//   // event.preventDefault();
-//   if (store.user) {
-//   api.getLibraries()
-//     .then(ui.getLibrariesSuccess)
-//     .catch(ui.failure);
-//   }
-// };
-//
-
 const onCreateNewButton = function(event) {
   event.preventDefault();
   $('#create-modal').modal('show');
@@ -38,16 +27,14 @@ const onUpdateProductButton = function(event) {
 };
 
 //
-// const onDeleteLib= function(event) {
-//   event.preventDefault();
-//   let data = getFormFields(event.target);
-//   api.deleteLib(data)
-//     .then(ui.deleteLibSuccess)
-//     .then(function() {
-//       onGetLibraries();
-//   })
-//     .catch(ui.failure);
-// };
+const onDeleteProduct = function(event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  api.deleteProduct(data)
+    .then(ui.deleteProductSuccess)
+    .catch(ui.failure);
+};
+
 const onUpdateProduct = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -66,6 +53,7 @@ const onViewProducts = function(event) {
       $('#create-form').on('submit', onCreateProduct);
       $('#edit-product').on('click', onUpdateProductButton);
       $('#updateProduct').on('submit', onUpdateProduct);
+      $('#delete-product').on('click', onDeleteProduct);
     })  //getAllSuccess needs to be updated
     .catch(ui.failure);
   // }
@@ -87,6 +75,5 @@ module.exports = {
   getAllHandler,
   onCreateProduct,
   onUpdateProduct,
-
-  // onDeleteLib,
+  onDeleteProduct,
 };

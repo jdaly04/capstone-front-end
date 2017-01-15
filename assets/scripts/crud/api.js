@@ -43,21 +43,20 @@ $.ajax({
     });
   //
   //
-  //   const deleteLib= (data) =>
-  //    $.ajax({
-  //      url: config.apiOrigins.production + '/libraries/' + data.library.id,
-  //       method: 'DELETE',
-  //       headers: {
-  //       Authorization: 'Token token=' + store.user.token,
-  //       },
-  //     });
-  //
+    const deleteProduct = (data) =>
+     $.ajax({
+       url: config.apiOrigins.production + '/products/' + data.product.id,
+        method: 'DELETE',
+        headers: {
+        Authorization: 'Token token=' + store.user.token,
+        },
+      });
+
 
 
 module.exports = {
   viewAllProducts,
   createProduct,
   updateProduct,
-  // deleteLib,
-  // getLibraries,
+  deleteProduct,
 };

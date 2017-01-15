@@ -36,24 +36,21 @@ const viewAllSuccess = (data) => {
 //     $('.messages').text('Oops, something went wrong. Make sure your library is only twenty characters, and that it is a new library name!');
 // };
 //
-// const updateProductSuccess = (data) => {
-//   console.log('working!');
-//   console.log(data);
-//   $('#updateProduct').trigger("reset");
-//   $('#update-modal').modal('hide');
-// };
+const updateProductSuccess = () => {
+  $('#updateProduct').trigger("reset");
+  $('#update-modal').modal('hide');
+};
 // //
 // const updateFailure = (error) => {
 //   $('.messages').text('Oops, something went wrong!');
 //   console.error(error);
 // };
 //
-// const deleteLibSuccess = () => {
-//   console.log('working!');
-//   $('.show-library').hide();
-//   $('#deleteLib').trigger("reset");
-// };
-//
+const deleteProductSuccess = () => {
+  console.log('working!');
+  $('#deleteProduct').trigger("reset");
+};
+
  const failure = (error) => {
   //  $('.messages').text('Oops, something went wrong. Try again.');
   console.error(error);
@@ -62,8 +59,8 @@ const viewAllSuccess = (data) => {
 module.exports = {
   viewAllSuccess,
   createProductSuccess,
-  // updateProductSuccess,
-  // deleteLibSuccess,
+  updateProductSuccess,
+  deleteProductSuccess,
   failure,
   // updateFailure,
   // createFailure,
