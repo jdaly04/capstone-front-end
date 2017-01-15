@@ -1,14 +1,10 @@
 /*////////////  HEADER STYLES  start  ////////////// */
 
-.hero {
-    background-color: #AB987A;
-    /*background-image:url(../assets/styles/images/header.jpg);*/
-    background-image: url(./images/header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    /*height: 750px;*/
+.page-top {
+  background-color: #F7F5E6;
 }
+
+
 /*////////////  HEADER STYLES end   ////////////// */
 
 
@@ -16,13 +12,15 @@
 .about {
     width: 100%;
     height: 450px;
+    background-color: #F7F5E6;
 }
 
 .about-title {
     font-family: 'Oswald', sans-serif;
     font-size: 54px;
-    color: #AB987A;
+    color: #52658F;
     text-align: center;
+    height:
     /* margin: 6px 2px; */
 }
 
@@ -31,9 +29,10 @@
     text-align: center;
     font-size: 18px;
     font-weight: 400;
-    color: #AB987A;
+    color: #52658F;
     width: 540px;
     margin: 0 auto;
+    padding: 25px;
 }
 
 /*////////////  ABOUT STYLES  end  ////////////// */
@@ -54,11 +53,54 @@
   padding: 15px;
 
 }
+
 /*////////////  PHOTO GALLERY STYLES  start  ////////////// */
+#photo-one {
+  background-image: url(./images/chair.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 33%;
+}
+
+#photo-two {
+  background-image: url(./images/couch.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 33%;
+}
+
+#photo-three {
+  background-image: url(./images/sac.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 33%;
+}
+
+#photo-four {
+  background-image: url(./images/stool.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 33%;
+}
+
+#photo-five {
+  background-image: url(./images/dresser.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 33%;
+}
+
+#photo-six {
+  background-image: url(./images/armwoire.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 33%;
+}
+
 .photo-gallery {
     width: 100%;
     height: 600px;
-    background-color: orange;
+    /*background-color: orange;*/
     /* text-align: center; */
 }
 
@@ -68,11 +110,6 @@
     float: left;
     height: 300px;
     transition: color .5s ease-out, background .5s ease-in;
-}
-
-.photo-thumb:hover {
-  background-color: blue;
-
 }
 
 .footer {
