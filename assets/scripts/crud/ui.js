@@ -26,7 +26,8 @@ const viewAllSuccess = (data) => {
  const createProductSuccess = (data) => {
   console.log(data);
   $('.messages').text('Success! New library created and added to the end of your library list!');
-    $('#create-form').trigger('reset');
+  $('#create-form').trigger('reset');
+  $('#create-modal').modal('hide');
 };
 //
 // const createFailure = (error) => {
