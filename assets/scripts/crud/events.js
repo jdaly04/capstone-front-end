@@ -5,13 +5,6 @@ const api = require('./api');
 const ui = require('./ui');
 //const store = require('../store.js');
 
-const onViewProducts = function(event) {
-  event.preventDefault();
-  api.viewAllProducts()
-    .then(ui.viewAllSuccess)  //getAllSuccess needs to be updated
-    .catch(ui.failure);
-  // }
-};
 
 // const onGetLibraries = function() {
 //   // event.preventDefault();
@@ -38,18 +31,12 @@ const onCreateProduct = function(event) {
     // })
     .catch(ui.createFailure);
 };
-//
-// const onUpdateLib = function(event) {
-//   event.preventDefault();
-//   let data = getFormFields(event.target);
-//   console.log(event.target);
-//   api.updateLib(data)
-//     .then(ui.updateLibSuccess)
-//     .then(function() {
-//       onGetLibraries();
-//   })
-//     .catch(ui.updateFailure);
-// };
+
+const onUpdateProductButton = function(event) {
+  event.preventDefault();
+  $('#update-modal').modal('show');
+};
+
 //
 // const onDeleteLib= function(event) {
 //   event.preventDefault();
@@ -61,22 +48,45 @@ const onCreateProduct = function(event) {
 //   })
 //     .catch(ui.failure);
 // };
+const onUpdateProduct = function(event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  console.log(event.target);
+  api.updateProduct(data)
+    .then(ui.updateProductSuccess)
+    .catch(ui.updateFailure);
+};
+
+const onViewProducts = function(event) {
+  event.preventDefault();
+  api.viewAllProducts()
+    .then(ui.viewAllSuccess)
+    .then(function() {
+      $('#new-prod').on('click', onCreateNewButton);
+      $('#create-form').on('submit', onCreateProduct);
+      $('#edit-product').on('click', onUpdateProductButton);
+      $('#updateProduct').on('submit', onUpdateProduct);
+    })  //getAllSuccess needs to be updated
+    .catch(ui.failure);
+  // }
+};
 //
     const getAllHandler = () => {
       $('#view-all').on('click', onViewProducts);
-      $('#create-product').on('click', onCreateNewButton);
+      //$('#new-prod').on('click', onCreateNewButton);
       $('#create-form').on('submit', onCreateProduct);
-//   $('.createLibrary').on('submit', onCreateLib);
-//   $('#updateLibName').on('submit', onUpdateLib);
-//   $('#deleteLib').on('submit', onDeleteLib);
-//   $('#get-libraries').on('click', onGetLibraries);
+      $('#edit-product').on('click', onUpdateProductButton);
+      $('#updateProduct').on('submit', onUpdateProduct);
+//    $('#deleteLib').on('submit', onDeleteLib);
     };
 
 module.exports = {
   onViewProducts,
   onCreateNewButton,
-   getAllHandler,
-   onCreateProduct,
-  // onUpdateLib,
+  onUpdateProductButton,
+  getAllHandler,
+  onCreateProduct,
+  onUpdateProduct,
+
   // onDeleteLib,
 };

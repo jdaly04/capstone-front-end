@@ -11,6 +11,7 @@ const viewAllSuccess = (data) => {
   $('#product-crud').modal('show');
   console.log("data is", data);
   $('#view-all-products').show().html(viewAllProductsTemplate(data));
+
 };
 
 // const getLibrariesSuccess = (data) => {
@@ -35,14 +36,15 @@ const viewAllSuccess = (data) => {
 //     $('.messages').text('Oops, something went wrong. Make sure your library is only twenty characters, and that it is a new library name!');
 // };
 //
-// const updateLibSuccess = (data) => {
+// const updateProductSuccess = (data) => {
 //   console.log('working!');
 //   console.log(data);
-//   $('#updateLibName').trigger("reset");
+//   $('#updateProduct').trigger("reset");
+//   $('#update-modal').modal('hide');
 // };
-//
+// //
 // const updateFailure = (error) => {
-//   $('.messages').text('Make sure your library is only twenty characters, that it is a new library name, and that it has the correct id!');
+//   $('.messages').text('Oops, something went wrong!');
 //   console.error(error);
 // };
 //
@@ -59,9 +61,8 @@ const viewAllSuccess = (data) => {
 
 module.exports = {
   viewAllSuccess,
-  // getLibrariesSuccess,
-   createProductSuccess,
-  // updateLibSuccess,
+  createProductSuccess,
+  // updateProductSuccess,
   // deleteLibSuccess,
   failure,
   // updateFailure,
