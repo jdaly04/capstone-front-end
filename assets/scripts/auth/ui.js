@@ -59,6 +59,7 @@ const signOutSuccess = () => {
   $('#sign-out-button').hide();
   $('#delete').hide();
   $('#delete-button').hide();
+  $('.user-messages').hide();
   // $('#update-submit').hide();
   // $('#updateLibName').hide();
   // $('#create-form').hide();

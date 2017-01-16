@@ -18,7 +18,7 @@ const onCreateProduct = function(event) {
     // .then(function() {
     //   onViewProducts();
     // })
-    .catch(ui.createFailure);
+    .catch(ui.failure);
 };
 
 const onUpdateProductButton = function(event) {

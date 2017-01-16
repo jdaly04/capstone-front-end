@@ -3,6 +3,8 @@
 const store = require('../store');
 //const readData = JSON.parse(data);
 const viewAllProductsTemplate = require('../templates/products.handlebars');
+// const api = require('./api.js');
+// const ui = require('./ui.js');
 // const createLibrary = require('../templates/libraries.handlebars');
 //const getAllLibraries = require('../templates/allLibraries.handlebars');
 //const store = require('../store.js');
@@ -12,7 +14,6 @@ const viewAllSuccess = (data) => {
   $('#product-crud').modal('show');
   console.log("data is", data);
   $('#view-all-products').show().html(viewAllProductsTemplate(data));
-
 };
 
 // const getLibrariesSuccess = (data) => {
@@ -30,6 +31,10 @@ const viewAllSuccess = (data) => {
   $('.messages').text('Success! New library created and added to the end of your library list!');
   $('#create-form').trigger('reset');
   $('#create-modal').modal('hide');
+  $('.user-messages').text("Product added! Check the list!");
+  setTimeout(function(){
+  $('.user-messages').empty();
+}, 5000);
 };
 //
 // const createFailure = (error) => {
@@ -40,20 +45,31 @@ const viewAllSuccess = (data) => {
 const updateProductSuccess = () => {
   $('#updateProduct').trigger("reset");
   $('#update-modal').modal('hide');
+  $('.user-messages').text("Product updated! Check the list!");
+  setTimeout(function(){
+  $('.user-messages').empty();
+}, 5000);
 };
 // //
-// const updateFailure = (error) => {
-//   $('.messages').text('Oops, something went wrong!');
-//   console.error(error);
-// };
-//
+const updateFailure = (error) => {
+  $('.user-messages').text('Oops, something went wrong!');
+  console.error(error);
+};
+//;
 const deleteProductSuccess = () => {
-  console.log('working!');
+  $('#delete-modal').modal('hide');
   $('#deleteProduct').trigger("reset");
+  $('.user-messages').text("Product deleted! Check the list!");
+  setTimeout(function(){
+  $('.user-messages').empty();
+}, 5000);
 };
 
  const failure = (error) => {
-  //  $('.messages').text('Oops, something went wrong. Try again.');
+  $('.user-messages').text('Oops, something went wrong. Try again.');
+  setTimeout(function(){
+  $('.user-messages').empty();
+}, 5000);
   console.error(error);
  };
 
@@ -63,6 +79,6 @@ module.exports = {
   updateProductSuccess,
   deleteProductSuccess,
   failure,
-  // updateFailure,
+  updateFailure,
   // createFailure,
 };
