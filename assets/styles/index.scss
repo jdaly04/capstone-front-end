@@ -1,27 +1,29 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$nav-color: #333a56;
+$vermillion-blue: #333a56;
 $font-color: #ff533d;
+$clean: #e8e8e8;
 
 .navbar,
 .navbar-brand {
-  background-color: $nav-color;
-  color: #e8e8e8;
+  background-color: $vermillion-blue;
+  color: $clean;
   font-size: 25px;
 }
 
 .nav-bar,
 .dropdown-toggle {
-  background-color: $nav-color;
-  color: #e8e8e8;
+  background-color: $vermillion-blue;
+  color: $clean;
   font-size: 12px;
 }
 
 .user-messages {
   font-family: 'Nunito', serif;
-  font-style: italic;
   font-size: 20px;
+  font-style: italic;
+
 }
 
 @import './styles1.css';
