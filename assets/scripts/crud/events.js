@@ -27,6 +27,12 @@ const onUpdateProductButton = function(event) {
 };
 
 //
+
+const onDeleteButton = function(event) {
+  event.preventDefault();
+  $('#delete-modal').modal('show');
+};
+
 const onDeleteProduct = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -38,7 +44,6 @@ const onDeleteProduct = function(event) {
 const onUpdateProduct = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
-  console.log(event.target);
   api.updateProduct(data)
     .then(ui.updateProductSuccess)
     .catch(ui.updateFailure);
@@ -53,7 +58,9 @@ const onViewProducts = function(event) {
       $('#create-form').on('submit', onCreateProduct);
       $('#edit-product').on('click', onUpdateProductButton);
       $('#updateProduct').on('submit', onUpdateProduct);
-      $('#delete-product').on('click', onDeleteProduct);
+      $('#delete-product').on('click', onDeleteButton);
+      $('#delete-form').on('submit', onDeleteProduct);
+
     })  //getAllSuccess needs to be updated
     .catch(ui.failure);
   // }
@@ -61,11 +68,6 @@ const onViewProducts = function(event) {
 //
     const getAllHandler = () => {
       $('#view-all').on('click', onViewProducts);
-      //$('#new-prod').on('click', onCreateNewButton);
-      $('#create-form').on('submit', onCreateProduct);
-      $('#edit-product').on('click', onUpdateProductButton);
-      $('#updateProduct').on('submit', onUpdateProduct);
-//    $('#deleteLib').on('submit', onDeleteLib);
     };
 
 module.exports = {
@@ -75,5 +77,6 @@ module.exports = {
   getAllHandler,
   onCreateProduct,
   onUpdateProduct,
+  onDeleteButton,
   onDeleteProduct,
 };

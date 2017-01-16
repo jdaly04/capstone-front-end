@@ -1,6 +1,6 @@
 'use strict';
 
-//const store = require('../store');
+const store = require('../store');
 //const readData = JSON.parse(data);
 const viewAllProductsTemplate = require('../templates/products.handlebars');
 // const createLibrary = require('../templates/libraries.handlebars');
@@ -8,6 +8,7 @@ const viewAllProductsTemplate = require('../templates/products.handlebars');
 //const store = require('../store.js');
 
 const viewAllSuccess = (data) => {
+  store.products = data.products;
   $('#product-crud').modal('show');
   console.log("data is", data);
   $('#view-all-products').show().html(viewAllProductsTemplate(data));
