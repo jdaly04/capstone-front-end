@@ -56,9 +56,9 @@ const onViewProducts = function(event) {
     .then(function() {
       $('#new-prod').on('click', onCreateNewButton);
       $('#create-form').on('submit', onCreateProduct);
-      $('#edit-product').on('click', onUpdateProductButton);
+      $('.edit-product').on('click', onUpdateProductButton);
       $('#updateProduct').on('submit', onUpdateProduct);
-      $('#delete-product').on('click', onDeleteButton);
+      $('.delete-product').on('click', onDeleteButton);
       $('#delete-form').on('submit', onDeleteProduct);
 
     })  //getAllSuccess needs to be updated

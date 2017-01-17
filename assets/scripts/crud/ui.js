@@ -3,7 +3,7 @@
 const store = require('../store');
 //const readData = JSON.parse(data);
 const viewAllProductsTemplate = require('../templates/products.handlebars');
-// const api = require('./api.js');
+// const events = require('./events.js');
 // const ui = require('./ui.js');
 // const createLibrary = require('../templates/libraries.handlebars');
 //const getAllLibraries = require('../templates/allLibraries.handlebars');
