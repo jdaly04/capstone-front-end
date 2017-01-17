@@ -3,6 +3,7 @@
 const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
+// const editProductsTemplate = require('../templates/editProducts.handlebars');
 //const store = require('../store.js');
 
 const onCreateNewButton = function(event) {
@@ -21,16 +22,9 @@ const onCreateProduct = function(event) {
     .catch(ui.failure);
 };
 
-const onUpdateProductButton = function(event) {
-  event.preventDefault();
-  $('#update-modal').modal('show');
-};
-
-//
-
-// const onDeleteButton = function(event) {
+// const onUpdateProductButton = function(event) {
 //   event.preventDefault();
-//   $('#delete-modal').modal('show');
+//   $('#update-modal').modal('show');
 // };
 
 const onDeleteProduct = function(event) {
@@ -56,8 +50,8 @@ const onViewProducts = function(event) {
     .then(function() {
       $('#new-prod').on('click', onCreateNewButton);
       $('#create-form').on('submit', onCreateProduct);
-      $('.edit-product').on('click', onUpdateProductButton);
-      $('#updateProduct').on('submit', onUpdateProduct);
+      //$('.edit-product').on('click', onUpdateProductButton);
+      $('.updateProduct').on('submit', onUpdateProduct);
       $('.deleteProduct').on('submit', onDeleteProduct);
 
     })  //getAllSuccess needs to be updated
@@ -72,7 +66,7 @@ const onViewProducts = function(event) {
 module.exports = {
   onViewProducts,
   onCreateNewButton,
-  onUpdateProductButton,
+  // onUpdateProductButton,
   getAllHandler,
   onCreateProduct,
   onUpdateProduct,

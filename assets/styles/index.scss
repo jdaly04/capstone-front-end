@@ -4,6 +4,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 $vermillion-blue: #333a56;
 $font-color: #ff533d;
 $clean: #e8e8e8;
+$cream: #f7f5e6;
 
 .navbar,
 .navbar-brand {
@@ -23,7 +24,16 @@ $clean: #e8e8e8;
   font-family: 'Nunito', serif;
   font-size: 20px;
   font-style: italic;
+}
 
+.modal-header {
+  background-color: $vermillion-blue;
+  color: $cream;
+  font-family: 'Nunito', serif;
+}
+
+.modal-body {
+  background-color: $cream;
 }
 
 @import './styles1.css';

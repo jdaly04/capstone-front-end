@@ -199,11 +199,17 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+         NEW PRODUCT
+         <hr>
         <form class="createProduct" id="create-form">
-          <input type="text" class="newProductText" name="product[description]" placeholder="New Product Description">
-          <input type="text" class="newProductText" name="product[before_photo_url]" placeholder="'Before Photo' URL">
-          <input type="text" class="newProductText" name="product[price]" placeholder="Price (number only)">
-          <input type="text" class="newProductText" name="product[after_photo_url]" placeholder="'After Photo' URL">
+          Product Description: <input type="text" class="newProductText" name="product[description]" placeholder="">
+          <hr>
+          Before Photo: <input type="text" class="newProductText" name="product[before_photo_url]" placeholder="URL">
+          <hr>
+          Price: $ <input type="text" class="newProductText" name="product[price]" placeholder="Numbers only">
+          <hr>
+          After Photo: <input type="text" class="newProductText" name="product[after_photo_url]" placeholder="URL">
+          <hr>
           <button type="submit" class="btn btn-default" id="create-button">Create</button>
         </form>
       </div>
@@ -218,30 +224,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <form id="updateProduct">
+      <!--  <form id="updateProduct">
           <input type="text" name="product[id]" placeholder="Product ID">
           <input type="text" name="product[description]" placeholder="New Description">
           <input type="text" name="product[before_photo_url]" placeholder="Before Photo">
           <input type="text" name="product[price]" placeholder="Price">
           <input type="text" name="product[after_photo_url]" placeholder="After Photo">
           <button type="submit" class="btn btn-default" id="update-submit">Update</button>
-        </form>
-      </div>
-      <div class="modal-footer">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--DELETE PRODUCT FORM AND SUBMITBUTTON -->
-
-<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-      <!-- <form class="deleteProduct" id="delete-form">
-          <input type="text" name="product[id]" value={{id}} placeholder="Product Number">
-          <button type="submit" class="btn btn-default" id="delete-button">Delete</button>
         </form> -->
       </div>
       <div class="modal-footer">
@@ -249,4 +238,18 @@
     </div>
   </div>
 </div>
+
+<!--DELETE PRODUCT FORM AND SUBMIT BUTTON -->
+
+<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+    </div>
+    <div class="modal-footer">
+    </div>
+  </div>
+</div>
+</div>
+
 </html>

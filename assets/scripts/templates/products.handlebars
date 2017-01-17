@@ -10,7 +10,20 @@
 <h5 class="modal-photos">Before-Photo Link: <img src="{{product.before_photo_url}}"></h5>
 <h5 class="modal-photos">After-Photo Link: <img src="{{product.after_photo_url}}"></h5>
 <hr>
-  <button class="edit-product btn" data-toggle="modal" data-dismiss="modal" aria-hidden="true" href="#myModal5">Edit Product</button>
+  <form class="updateProduct">
+    <fieldset>
+      <input type="hidden" name="product[id]" value="{{product.id}}" placeholder="Product ID">
+      Edit Product Description: <input type="text" name="Description" value="{{product.description}}" placeholder="New Description">
+      <hr>
+      Edit Before Photo: <input type="text" name="Before Photo" value="{{product.before_photo_url}}" placeholder="Before Photo">
+      <hr>
+      Edit Price $: <input type="text" name="Price $" value="{{product.price}}" placeholder="Price">
+      <hr>
+      Edit After Photo: <input type="text" name="After Photo" value="{{product.after_photo_url}}" placeholder="After Photo">
+      <hr>
+      <input type="submit" value="Edit Project" id="update-submit">
+    </fieldset>
+  </form>
   <form class="deleteProduct" id="delete-form">
     <fieldset>
       <input type="hidden" name="product[id]" value="{{id}}">
