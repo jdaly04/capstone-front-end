@@ -4,8 +4,17 @@
   background-color: #F7F5E6;
 }
 
-
 /*////////////  HEADER STYLES end   ////////////// */
+
+.delete-product {
+  border-radius: 100px;
+  background-color: #FF533D;
+  color: #333a56;
+  font-family: Oswald;
+  margin: 20px;
+  padding: 15px;
+
+}
 
 
 /*////////////  ABOUT STYLES  start  ////////////// */
@@ -48,12 +57,13 @@
 }
 
 .edit-product {
-  background-color: #52658F;
+  background-color: #EBFF48;
   border-radius: 100px;
-  color: #F7F5E6;
+  color: #333a56;
   font-family: Oswald;
   margin: 20px;
   padding: 15px;
+
 }
 
 #view-all {
@@ -65,14 +75,16 @@
   padding: 15px;
 }
 
-.delete-product {
-  border-radius: 100px;
-  color: #F7F5E6;
-  font-family: Oswald;
-  margin: 20px;
-  padding: 15px;
 
+/*////////////// HOVER ACTIONS - start ////////////////////*/
+
+#view-all:hover {
+  text-decoration: underline;
 }
+
+/*////////////// HOVER ACTIONS - end ////////////////////*/
+
+
 
 /*////////////  PHOTO GALLERY STYLES  start  ////////////// */
 #photo-one {
@@ -83,7 +95,7 @@
 }
 
 #photo-two {
-  background-image: url(./images/numbered_dresser.jpg);
+  background-image: url(./images/turquoise_dresser_after.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 33%;
@@ -97,7 +109,7 @@
 }
 
 #photo-four {
-  background-image: url(./images/stool.jpg);
+  background-image: url(./images/numbered_dresser.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 33%;

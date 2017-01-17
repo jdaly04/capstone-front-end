@@ -1,4 +1,4 @@
-<div id="template-title">PAST PROJECTS</div>
+<div id="template-title">VIEW PROJECTS</div>
 <div id="create-product">
   <button id="new-prod"class="btn btn-default test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true">Create New Product</button>
 </div>
@@ -7,12 +7,16 @@
 <ul class=handlebars-body>
 <h4 id="product-description">Product Description: {{product.description}}</h4>
 <h5>Price: ${{product.price}}</h5>
-<h5>Before-Photo Link: {{product.before_photo_url}}
-<h5>After-Photo Link: {{product.after_photo_url}}
-<h6>Product Number: {{product.id}}
+<h5 class="modal-photos">Before-Photo Link: <img src="{{product.before_photo_url}}"></h5>
+<h5 class="modal-photos">After-Photo Link: <img src="{{product.after_photo_url}}"></h5>
 <hr>
-  <button class="edit-product btn btn-default test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true" href="#myModal5">Edit Product</button>
-  <button class="delete-product btn btn-danger test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true" href="#myModal5">Delete Product</button>
+  <button class="edit-product btn" data-toggle="modal" data-dismiss="modal" aria-hidden="true" href="#myModal5">Edit Product</button>
+  <form class="deleteProduct" id="delete-form">
+    <fieldset>
+      <input type="hidden" name="product[id]" value="{{id}}">
+      <input type="submit" name="submit" value="Delete" class="delete-product btn" id="delete-button">
+    </fieldset>
+  </form>
 </ul>
 <hr>
 {{/each}}

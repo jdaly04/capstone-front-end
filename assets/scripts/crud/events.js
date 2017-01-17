@@ -28,10 +28,10 @@ const onUpdateProductButton = function(event) {
 
 //
 
-const onDeleteButton = function(event) {
-  event.preventDefault();
-  $('#delete-modal').modal('show');
-};
+// const onDeleteButton = function(event) {
+//   event.preventDefault();
+//   $('#delete-modal').modal('show');
+// };
 
 const onDeleteProduct = function(event) {
   event.preventDefault();
@@ -58,8 +58,7 @@ const onViewProducts = function(event) {
       $('#create-form').on('submit', onCreateProduct);
       $('.edit-product').on('click', onUpdateProductButton);
       $('#updateProduct').on('submit', onUpdateProduct);
-      $('.delete-product').on('click', onDeleteButton);
-      $('#delete-form').on('submit', onDeleteProduct);
+      $('.deleteProduct').on('submit', onDeleteProduct);
 
     })  //getAllSuccess needs to be updated
     .catch(ui.failure);
@@ -77,6 +76,5 @@ module.exports = {
   getAllHandler,
   onCreateProduct,
   onUpdateProduct,
-  onDeleteButton,
   onDeleteProduct,
 };

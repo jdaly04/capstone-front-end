@@ -57,9 +57,9 @@ const updateFailure = (error) => {
 };
 //;
 const deleteProductSuccess = () => {
-  $('#delete-modal').modal('hide');
-  $('#deleteProduct').trigger("reset");
+  $('.deleteProduct').trigger("reset");
   $('.user-messages').text("Product deleted! Check the list!");
+  $('#product-crud').modal('hide');
   setTimeout(function(){
   $('.user-messages').empty();
 }, 5000);
