@@ -37,7 +37,7 @@
     text-align: center;
     font-size: 18px;
     font-weight: 400;
-    color: #52658F;
+    color: $lighter-blue;
     width: 540px;
     margin: 0 auto;
     padding: 25px;

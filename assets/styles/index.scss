@@ -5,6 +5,8 @@ $vermillion-blue: #333a56;
 $font-color: #ff533d;
 $clean: #e8e8e8;
 $cream: #f7f5e6;
+$lighter-blue: #52658f;
+$watermelon-red: #ff533d;
 
 .navbar,
 .navbar-brand {
@@ -28,12 +30,29 @@ $cream: #f7f5e6;
 
 .modal-header {
   background-color: $vermillion-blue;
-  color: $cream;
+  color: $lighter-blue;
   font-family: 'Nunito', serif;
 }
 
 .modal-body {
   background-color: $cream;
+  color: $lighter-blue;
+}
+
+.contact {
+  color: $watermelon-red;
+  font-family: 'Nunito', serif;
+  width: 100%;
+}
+
+.email-form {
+  background-color: $cream;
+}
+
+.footer {
+  color: $cream;
+
+
 }
 
 @import './styles1.css';

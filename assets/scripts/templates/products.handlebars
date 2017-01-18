@@ -10,6 +10,7 @@
 <h5 class="modal-photos">Before-Photo Link: <img src="{{product.before_photo_url}}"></h5>
 <h5 class="modal-photos">After-Photo Link: <img src="{{product.after_photo_url}}"></h5>
 <hr>
+{{#if product.editable}}
   <form class="updateProduct">
     <fieldset>
       <input type="hidden" name="product[id]" value="{{product.id}}" placeholder="Product ID">
@@ -30,6 +31,7 @@
       <input type="submit" name="submit" value="Delete" class="delete-product btn" id="delete-button">
     </fieldset>
   </form>
+  {{/if}}
 </ul>
 <hr>
 {{/each}}
