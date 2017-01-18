@@ -2,12 +2,19 @@
 const config = require('../config');
 const store = require('../store');
 
-const viewAllProducts = (data) =>
-  $.ajax({
+const viewAllProducts = (data) => {
+  const request = {
     url: config.apiOrigins.production + '/products',
     method: 'GET',
     data,
-  });
+  };
+  if (store.user) {
+    request.headers ={
+      Authorization: 'Token token=' + store.user.token,
+    };
+  }
+  return $.ajax(request);
+};
 
 const createProduct = (data) =>
   $.ajax({
