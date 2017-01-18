@@ -7,8 +7,8 @@
 <ul class=handlebars-body>
 <h4 id="product-description">Product Description: {{product.description}}</h4>
 <h5>Price: ${{product.price}}</h5>
-<h5 class="modal-photos">Before-Photo Link: <img src="{{product.before_photo_url}}"></h5>
-<h5 class="modal-photos">After-Photo Link: <img src="{{product.after_photo_url}}"></h5>
+<h5 class="modal-photos">Before-Photo Link: {{product.before_photo_url}}</h5>
+<h5 class="modal-photos">After-Photo Link: {{product.after_photo_url}}</h5>
 <hr>
 {{#if product.editable}}
   <form class="updateProduct">

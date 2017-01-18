@@ -3,6 +3,7 @@
 const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
+const store = require('../store.js');
 // const editProductsTemplate = require('../templates/editProducts.handlebars');
 //const store = require('../store.js');
 
@@ -14,6 +15,8 @@ const onCreateNewButton = function(event) {
 const onCreateProduct = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
+  data.product.user_id = store.user.id;
+  console.log("inside onCreateProduct data is", data);
   api.createProduct(data)
     .then(ui.createProductSuccess)
     // .then(function() {
@@ -32,7 +35,7 @@ const onDeleteProduct = function(event) {
   let data = getFormFields(event.target);
   api.deleteProduct(data)
     .then(ui.deleteProductSuccess)
-    .catch(ui.failure);
+    .catch(ui.deleteFailure);
 };
 
 const onUpdateProduct = function(event) {
@@ -48,6 +51,10 @@ const onViewProducts = function(event) {
   api.viewAllProducts()
     .then(ui.viewAllSuccess)
     .then(function() {
+      $('#new-prod').off();
+      $('#create-form').off();
+      $('.updateProduct').off();
+      $('.deleteProduct').off();
       $('#new-prod').on('click', onCreateNewButton);
       $('#create-form').on('submit', onCreateProduct);
       //$('.edit-product').on('click', onUpdateProductButton);

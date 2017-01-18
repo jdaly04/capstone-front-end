@@ -65,6 +65,14 @@ const deleteProductSuccess = () => {
 }, 5000);
 };
 
+const deleteFailure = (error) => {
+  $('.user-messages').text('Oops, something went wrong. Try again.');
+  console.error(error);
+  setTimeout(function() {
+  $('.user-messages').empty();
+}, 5000);
+};
+
  const failure = (error) => {
   $('.user-messages').text('Oops, something went wrong. Try again.');
   setTimeout(function(){
@@ -80,5 +88,6 @@ module.exports = {
   deleteProductSuccess,
   failure,
   updateFailure,
+  deleteFailure,
   // createFailure,
 };
