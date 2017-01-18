@@ -41,6 +41,8 @@ const onDeleteProduct = function(event) {
 const onUpdateProduct = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
+  // data.product.user_id = store.user.id;
+  console.log("in onUpdateProduct data is", data);
   api.updateProduct(data)
     .then(ui.updateProductSuccess)
     .catch(ui.updateFailure);

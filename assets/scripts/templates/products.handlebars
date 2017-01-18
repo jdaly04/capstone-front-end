@@ -14,13 +14,13 @@
   <form class="updateProduct">
     <fieldset>
       <input type="hidden" name="product[id]" value="{{product.id}}" placeholder="Product ID">
-      Edit Product Description: <input type="text" name="Description" value="{{product.description}}" placeholder="New Description">
+      Edit Product Description: <input type="text" name="product[description]" value="{{product.description}}" placeholder="New Description">
       <hr>
-      Edit Before Photo: <input type="text" name="Before Photo" value="{{product.before_photo_url}}" placeholder="Before Photo">
+      Edit Before Photo: <input type="text" name="product[before_photo_url]" value="{{product.before_photo_url}}" placeholder="Before Photo">
       <hr>
-      Edit Price $: <input type="text" name="Price $" value="{{product.price}}" placeholder="Price">
+      Edit Price $: <input type="text" name="product[price]" $ value="{{product.price}}" placeholder="Price">
       <hr>
-      Edit After Photo: <input type="text" name="After Photo" value="{{product.after_photo_url}}" placeholder="After Photo">
+      Edit After Photo: <input type="text" name="product[after_photo_url]" value="{{product.after_photo_url}}" placeholder="After Photo">
       <hr>
       <input type="submit" value="Edit Project" id="update-submit">
     </fieldset>
