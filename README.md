@@ -26,6 +26,7 @@ This application was built over a one-week period. I started with brainstorming 
 Front-End Dependencies: npm install
 Back-End Dependencies: bundle install
 
+---
 ### User Stories
 As a user, I want to be able to see pictures of project examples.
 As a user, I want to be able to see pictures of current projects.
@@ -36,12 +37,15 @@ As an admin, I want to be able to delete a project from the database.
 As an admin, I want to be able to edit the bio on the site.
 As an admin, I want to be able to edit the photo gallery on landing page.
 
+---
 ### ERD
 [DalyRestoration ERD](https://editor.ponyorm.com/user/jdaly04/DalyRestoration)
 
+---
 ### Wireframes
 [Front-End Wireframe](http://i.imgur.com/zKT2SuA.jpg)
 
+---
 ### Unsolved Problems
 Future feature implementation would be to render photos in view-all modal rather than url to images.
 Another future feature implementation is for admin user to be able to edit bio and photo gallery. This would mean adding another resource on back-end for "page layout".
