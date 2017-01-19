@@ -7,9 +7,19 @@
 {{/if}}
 <ul class=handlebars-body>
 <h4 id="product-description">Product Description: {{product.description}}</h4>
-<h5>Price: ${{product.price}}</h5>
+{{#if product.price}}
+<h5>Price $: {{product.price}}</h5>
+{{else}}
+<h5>Price: No Price Listed</h5>
+{{/if}}
+{{#if product.before_photo_link}}
 <h5 class="modal-photos">Before-Photo Link: {{product.before_photo_url}}</h5>
+{{else}}
+{{/if}}
+{{#if product.after_photo_url}}
 <h5 class="modal-photos">After-Photo Link: {{product.after_photo_url}}</h5>
+{{else}}
+{{/if}}
 <hr>
 {{#if product.editable}}
   <form class="updateProduct">
