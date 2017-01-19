@@ -1,9 +1,10 @@
 <div id="template-title">VIEW PROJECTS</div>
-<div id="create-product">
-  <button id="new-prod"class="btn btn-default test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true">Create New Product</button>
-</div>
 <hr>
 {{#each products as |product|}}
+{{#if product.editable}}
+<div id="create-product">
+  <button id="new-prod"class="btn btn-default test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true">Create New Product</button>
+{{/if}}
 <ul class=handlebars-body>
 <h4 id="product-description">Product Description: {{product.description}}</h4>
 <h5>Price: ${{product.price}}</h5>
