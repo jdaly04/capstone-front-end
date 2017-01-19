@@ -1,10 +1,10 @@
 ### Capstone Front-End README
 ---
 
-App Screenshot:
+### App Screenshot:
 ![Alt text](/assets/styles/images/screenshot_app.png?raw=true "App Screenshot")
----
 
+---
 ### Technologies Used:
 - HTML5
 - CSS3
