@@ -1,4 +1,4 @@
-## Capstone Front-End
+### Capstone Front-End README
 ---
 
 App Screenshot:
