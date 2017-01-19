@@ -17,7 +17,7 @@ App Screenshot:
 - SQL / PSQL
 
 ---
-*** General Approach
+### General Approach
 This application was built over a one-week period. I started with brainstorming and writing user stories, moved on to building out wireframes for different app features, and planned out daily approach given the seven-day time constraint. I then built out ERD models and began building out Rails back-end. I used curl requests to test back-end CRUD functionality on both resources -- users and products -- before moving on to front-end feature implementation. Once all back-end functionality was complete I began with front-end authentication, then built CRUD buttons for products resources. Once this was functioning on front-end I tweaked color scheme and overall UI.
 ---
 ### Installation Instructions
