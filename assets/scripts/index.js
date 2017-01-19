@@ -9,6 +9,8 @@ $(() => {
   setAPIOrigin(location, config);
   authEvents.addHandlers();
   crudEvents.getAllHandler();
+  $('#ch-password').hide();
+  $('#sign-out-button').hide();
 });
 
 // use require with a reference to bundle the file and use it in this file

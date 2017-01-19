@@ -20,7 +20,7 @@ const signInSuccess = (data) => { //if you have curly braces you can have more t
   $('#ch-password').show();
   $('#sign-out-button').show();
   $('#sign-in-button').hide();
-  $('#sign-up-button').hide();
+  // $('#sign-up-button').hide();
   $('#signInModal').modal("hide");
   $('#patch').show();
   // $('#update').show();
