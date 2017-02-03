@@ -53,7 +53,8 @@
   border-radius: 100px;
   color: #F7F5E6;
   font-family: Oswald;
-  padding: 10px;
+  margin: 20px;
+  padding: 15px;
 }
 
 #update-submit {
@@ -82,6 +83,12 @@
 #view-all:hover {
   text-decoration: underline;
 }
+
+#new-prod:hover {
+  text-decoration: underline;
+}
+
+
 
 /*////////////// HOVER ACTIONS - end ////////////////////*/
 

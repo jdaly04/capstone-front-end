@@ -24,6 +24,7 @@ const signInSuccess = (data) => { //if you have curly braces you can have more t
   $('#signInModal').modal("hide");
   $('#patch').show();
   $('#new-prod').show();
+  $('#create-product').show();
   // $('#update').show();
   // $('#updateSubmit').show();
   // $('#delete').hide();
@@ -62,6 +63,7 @@ const signOutSuccess = () => {
   $('#delete-button').hide();
   $('.user-messages').hide();
   $('#new-prod').hide();
+  $('#create-product').hide();
   // $('#update-submit').hide();
   // $('#updateLibName').hide();
   // $('#create-form').hide();
