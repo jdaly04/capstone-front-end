@@ -11,6 +11,7 @@ $(() => {
   crudEvents.getAllHandler();
   $('#ch-password').hide();
   $('#sign-out-button').hide();
+  $('#new-prod').hide();
 });
 
 // use require with a reference to bundle the file and use it in this file
