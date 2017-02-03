@@ -1,51 +1,47 @@
 <div id="template-title">VIEW PROJECTS</div>
 <hr>
-{{#each products as |product|}}
-{{#if product.editable}}
 <div id="create-product">
-  <button id="new-prod"class="btn btn-default test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true">Create New Product</button>
-{{/if}}
-<ul class=handlebars-body>
-{{#if product.description}}
-<h4 id="product-description">Product Description: {{product.description}}</h4>
-{{else}}
-{{/if}}
-{{#if product.price}}
-<h5>Price $: {{product.price}}</h5>
-{{else}}
-<h5>Price: No Price Listed</h5>
-{{/if}}
-{{#if product.before_photo_link}}
-<h5 class="modal-photos">Before-Photo Link: {{product.before_photo_url}}</h5>
-{{else}}
-{{/if}}
-{{#if product.after_photo_url}}
-<h5 class="modal-photos">After-Photo Link: {{product.after_photo_url}}</h5>
-{{else}}
-{{/if}}
-<hr>
-{{#if product.editable}}
-  <form class="updateProduct">
-    <fieldset>
-      <input type="hidden" name="product[id]" value="{{product.id}}" placeholder="Product ID">
-      Edit Product Description: <input type="text" name="product[description]" value="{{product.description}}" placeholder="New Description">
+  <button id="new-prod" class="btn btn-default test-button" data-toggle="modal" data-dismiss="modal" aria-hidden="true">Create New Product</button>
+  {{#each products as |product|}}
+    {{#if product.editable}}
+    {{/if}}
+    <ul class=handlebars-body>
+      {{#if product.description}}
+        <h4 id="product-description">Product Description: {{product.description}}</h4>
+      {{else}}
+      {{/if}}
+      {{#if product.price}}
+        <h5>Price $: {{product.price}}</h5>
+      {{else}}
+        <h5>Price: No Price Listed</h5>
+      {{/if}}
+      {{#if product.before_photo_link}}
+        <h5 class="modal-photos">Before-Photo Link: {{product.before_photo_url}}</h5>
+      {{else}}
+      {{/if}}
+      {{#if product.after_photo_url}}
+        <h5 class="modal-photos">After-Photo Link: {{product.after_photo_url}}</h5>
+      {{else}}
+      {{/if}}
       <hr>
-      Edit Before Photo: <input type="text" name="product[before_photo_url]" value="{{product.before_photo_url}}" placeholder="Before Photo">
-      <hr>
-      Edit Price $: <input type="text" name="product[price]" $ value="{{product.price}}" placeholder="Price">
-      <hr>
-      Edit After Photo: <input type="text" name="product[after_photo_url]" value="{{product.after_photo_url}}" placeholder="After Photo">
-      <hr>
-      <input type="submit" value="Edit Project" id="update-submit">
-    </fieldset>
-  </form>
-  <form class="deleteProduct" id="delete-form">
-    <fieldset>
-      <input type="hidden" name="product[id]" value="{{id}}">
-      <input type="submit" name="submit" value="Delete" class="delete-product btn" id="delete-button">
-    </fieldset>
-  </form>
-  {{/if}}
-</ul>
-<hr>
-{{/each}}
+      {{#if product.editable}}
+        <form class="updateProduct">
+          <fieldset>
+            <input type="hidden" name="product[id]" value="{{product.id}}" placeholder="Product ID"> Edit Product Description: <input type="text" name="product[description]" value="{{product.description}}" placeholder="New Description">
+            <hr> Edit Before Photo: <input type="text" name="product[before_photo_url]" value="{{product.before_photo_url}}" placeholder="Before Photo">
+            <hr> Edit Price $: <input type="text" name="product[price]" $ value="{{product.price}}" placeholder="Price">
+            <hr> Edit After Photo: <input type="text" name="product[after_photo_url]" value="{{product.after_photo_url}}" placeholder="After Photo">
+            <hr>
+            <input type="submit" value="Edit Project" id="update-submit">
+          </fieldset>
+        </form>
+        <form class="deleteProduct" id="delete-form">
+          <fieldset>
+            <input type="hidden" name="product[id]" value="{{id}}">
+            <input type="submit" name="submit" value="Delete" class="delete-product btn" id="delete-button">
+          </fieldset>
+        </form>
+      {{/if}}
+    </ul>
+    <hr>
+  {{/each}}

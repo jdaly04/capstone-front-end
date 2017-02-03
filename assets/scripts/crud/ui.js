@@ -10,22 +10,17 @@ const viewAllProductsTemplate = require('../templates/products.handlebars');
 //const store = require('../store.js');
 
 const viewAllSuccess = (data) => {
-  store.products = data.products;
-  $('#product-crud').modal('show');
-  console.log("data is", data);
-  $('#view-all-products').show().html(viewAllProductsTemplate(data));
+  if (store.user) {
+    $('#new-prod').show();
+    store.products = data.products;
+    $('#product-crud').modal('show');
+    $('#view-all-products').show().html(viewAllProductsTemplate(data));
+   } else {
+    $('#product-crud').modal('show');
+    $('#new-prod').hide();
+    $('#view-all-products').show().html(viewAllProductsTemplate(data));
+  }
 };
-
-// const getLibrariesSuccess = (data) => {
-//   $('.get-all-libraries').html(getAllLibraries(data));
-//   $('#update-submit').show();
-//   $('#updateLibName').show();
-//   $('#delete').show();
-//   $('#delete-button').show();
-//   $('.messages').empty();
-//   console.log(data);
-// };
-//
  const createProductSuccess = (data) => {
   console.log(data);
   $('.messages').text('Success! New library created and added to the end of your library list!');
