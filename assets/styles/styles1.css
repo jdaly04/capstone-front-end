@@ -152,6 +152,12 @@
     transition: color .5s ease-out, background .5s ease-in;
 }
 
+.photo-thumb:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .footer {
     background-color: #0F1626;
     background-repeat: no-repeat;

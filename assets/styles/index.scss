@@ -9,9 +9,11 @@ $lighter-blue: #52658f;
 $watermelon-red: #ff533d;
 $navbar-background: #323954;
 
-.navbar,
-.navbar-brand {
+.navbar {
   background-color: $vermillion-blue;
+  -moz-box-shadow: 0px 10px 12px 0px rgba(219,219,219,1);
+  -webkit-box-shadow: 0px 10px 12px 0px rgba(219,219,219,1);
+  box-shadow: 0px 10px 12px 0px rgba(219,219,219,1);
   color: $clean;
   font-size: 25px;
 }
@@ -29,6 +31,7 @@ $navbar-background: #323954;
 }
 
 .user-messages {
+  background-color: $cream;
   font-family: 'Nunito', serif;
   font-size: 20px;
   font-style: italic;
@@ -64,4 +67,13 @@ $navbar-background: #323954;
   text-align: center;
 }
 
+.navbar-brand {
+  color: $clean;
+
+.navbar-brand:hover {
+  color: $watermelon-red;
+}
+
+
 @import './styles1.css';
+}
